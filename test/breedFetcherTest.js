@@ -20,7 +20,7 @@ describe('fetchBreedDescription', () => {
 
       assert.equal(desc, null);
 
-      assert.equal(`undefined is not a valid breed`, err)
+      assert.equal(`undefined is not a valid breed`, err);
 
       done();
     });
