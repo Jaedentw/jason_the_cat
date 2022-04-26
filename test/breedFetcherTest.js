@@ -15,4 +15,14 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
+  it('returns error message and the description variable is equal to null', (done) => {
+    fetchBreedDescription(undefined, (err, desc) => {
+
+      assert.equal(desc, null);
+
+      assert.equal(`undefined is not a valid breed`, err)
+
+      done();
+    });
+  });
 });

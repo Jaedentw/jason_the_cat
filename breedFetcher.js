@@ -18,6 +18,11 @@ const fetchBreedDescription = function(breedName, callback) {
 module.exports = { fetchBreedDescription };
 
 /*
+// original command line based function
+
+const myArgs = process.argv.slice(2);
+const breedName = myArgs[0];
+
 request.get(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, function(err, response, body) {
   if (err !== null) {
     console.log(`${err}:${response}`);
@@ -31,4 +36,5 @@ request.get(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, function(er
   const description = parsedBody[0]['description'];
   console.log(description);
 });
+
 */
