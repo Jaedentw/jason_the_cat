@@ -4,7 +4,8 @@ const fetchBreedDescription = function(breedName, callback) {
   request.get(`https://api.thecatapi.com/v1/breeds/search?q=${breedName}`, (error, response, body) => {
     let description = '';
     if (body === '[]') {
-      description = `Error: ${breedName} is not a valid breed`;
+      error = `${breedName} is not a valid breed`;
+      description = null;
       callback(error, description);
     } else {
       const parsedBody = JSON.parse(body);
